@@ -20,6 +20,7 @@ add single or double quotes before typing the message,
 
 = git log                          ---> check history of commits
 = git log --stat                   ---> show more information about commits
+= git log --graph --oneline        ---> show summarized view of commit history
 = git diff README
 = git diff                         ---> To check difference between 2 files or 2 versions of the same file
 = git add -p                       ---> has same effect as above command and add them
@@ -56,7 +57,9 @@ add single or double quotes before typing the message,
 # --- Branches ---
 
 = git branch                       ---> to list branches (working one will stressed with different color with * before it)
+= git branch <name>                ---> Creates a new branch
 = git checkout -b new-branch       ---> create & switch to a new branch
 = git branch -d new-branch         ---> to delete a branch
 = git branch -D new-branch         ---> force delete a branch
-= git merge branch-name              ---> merge branch to master
+= git merge branch-name            ---> merge branch to master
+= git merge --abort                ---> abort merge 
