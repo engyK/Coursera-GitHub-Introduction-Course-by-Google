@@ -1,0 +1,62 @@
+# --- MAKE A NEW Repository ---
+
+= git init                          ---> make a new repository
+= git config -l                     ---> know configuration
+
+
+# --- git commit Guide Lines ---
+
+Title goes here ( 50 char max )
+'blank line'
+full description of changes, each line less than 72 char. length
+lines starting with "#" will be ignores, empty message abort commit
+Multi-line commit message:
+add single or double quotes before typing the message,
+ keep pressing enter and writing the next line,
+ and finally close the quote at end of the message
+
+
+# --- Commits ---
+
+= git log                          ---> check history of commits
+= git log --stat                   ---> show more information about commits
+= git diff README
+= git diff                         ---> To check difference between 2 files or 2 versions of the same file
+= git add -p                       ---> has same effect as above command and add them
+= git diff --staged                ---> show staged but uncommited changes
+= git commit -a -m ""              ---> add small modified files then commit it , skip the staging area
+= git log -p                       ---> see what changes are made to our repo 
+= git show commitID
+
+
+# --- Delete or Rename files in my Repo ---
+
+= git rm filename.py               ---> remove file from git directory
+= git mv oldName newName.py        ---> Rename file
+= ls -l                            ---> to list files
+= git status                       ---> check what need to be commited and untracked files
+= echo .DS_STORE > .gitignore      ---> add gitignore file ignoring DS_STORE files
+= ls -la    --> list all files
+
+
+# --- Undoing changes to files ---
+
+= git checkout fileName.py         ---> undo them before they staged
+= git reset HEAD output.txt        ---> reset or undo staged changes after git add . *
+= git reset -p                     ---> to make git ask me which changes I want to reset
+= git commit --amend               ---> overwrite and add changes to most recent commit
+
+
+# --- Rollback ---
+
+= git revert HEAD
+= git revert commitID              ---> to roll back old commit not the most recent one
+
+
+# --- Branches ---
+
+= git branch                       ---> to list branches (working one will stressed with different color with * before it)
+= git checkout -b new-branch       ---> create & switch to a new branch
+= git branch -d new-branch         ---> to delete a branch
+= git branch -D new-branch         ---> force delete a branch
+= git merge branch-name              ---> merge branch to master
